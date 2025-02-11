@@ -1,26 +1,55 @@
-//LEGGERE LE ISTRUZIONI NEL FILE README.md
 
-//Import di Classi Java necessarie al funzionamento del programma
 import java.util.Scanner;
+import java.util.Random;
 
-// Classe principale, con metodo main
+public int eliminazione(int [] V=new int []) {
+    int i,N2;
+    N2=N-1;
+    i=ie;
+    while (i <= N-2){
+        V[i]=V[i+1];
+        i=i+1;
+    }
+return N2;
+
+}
+
 class Esercizio {
-    // Il programma parte con una chiamata a main().
+
     public static void main(String args[])
     {
-        //Variabili del programma
-        String nome;
-
-        //Creo l'oggetto in per l'input da tastiera
         Scanner in = new Scanner( System.in );
 
-        //Leggo l'input da tastiera
-        System.out.print("Inserisci il tuo nome: ");
-        nome = in.nextLine();
+        int N,i,j,ie;
+        int [] V=new int [N];
+        System.out.print("Inserisci il numero dei listelli");
+        N = in.nextLine();
+        i=ie;
+        i=0;
+        while (i<N){
+            V[i]=random(4+10-14)+1;
+            i=i+1;
+            System.out.println("Lunghezza" +i+ "listello: " +V[i]);
+        }
+        int contCoppie,cornicirettangolari;
+        bool Coppietrovate;
+        while (i<N-1){
+            while (j<N){
+                if(V[i] == V[j]){
+                    N2=eliminazione(V,N,ie);
+                    Coppietrovate=true;
+                    contCoppie++;
+                }else{
+                    Coppiatrovata=false;
+                }
+                j=i+1;
+            }
+            i=i+1;
+        }
+        cornicirettangolari=contCoppie/2;
+        System.out.println("Le cornici rettangolari che possono essere prodotte sono" +cornicirettangolari);
 
-        //Output del nome acquisito da tastiera
-        System.out.println("Ciao "+nome+"!");
+
     }
 }
 
-//LEGGERE LE ISTRUZIONI NEL FILE README.md
